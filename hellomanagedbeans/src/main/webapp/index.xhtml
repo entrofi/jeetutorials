@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+</h:head>
+<h:body>
+	<h:form id="helloForm" rendered="#{empty helloManagedBean.greetWho}">
+		<table>
+			<tr>
+				<td colspan="2"><h1>Greetings Page</h1></td>
+			</tr>
+			<tr>
+				<td colspan="2">Managed beans will say hello to you, if you
+					provide your name to us:</td>
+			</tr>
+			<tr>
+				<td>Your Name:</td>
+				<td><h:inputText value="#{helloManagedBean.greetWho}"
+						id="greetWho" /></td>
+			</tr>
+			<tr>
+				<td><h:commandButton action="#{helloManagedBean.sayHello}"
+						value="Say Hello" /></td>
+			</tr>
+		</table>
+	</h:form>
+	<h:form id="greetingForm">
+		<h:panelGrid id="greetingGrid" columns="1">
+			<f:facet name="header">
+				<h:outputText value="Greetings" />
+			</f:facet>
+			<h:panelGroup id="greeting"
+				rendered="#{not empty helloManagedBean.greetWho}">
+				<h:outputText value="Hello #{helloManagedBean.greetWho}"></h:outputText>
+			</h:panelGroup>
+			<h:panelGroup id="rudePerson"
+				rendered="#{not empty helloManagedBean.greetingMessage}">
+				<h:outputText value="#{helloManagedBean.greetingMessage}" />
+				<h:commandLink action="#{helloManagedBean.reset}" value="Reset"
+					rendered="#{not empty helloManagedBean.greetWho}" />
+			</h:panelGroup>
+		</h:panelGrid>
+	</h:form>
+
+</h:body>
+</html>
