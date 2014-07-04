@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>net.entrofi.tutorials.jee</groupId>
+	<artifactId>bom</artifactId>
+	<version>${versionProject}</version>
+	<packaging>pom</packaging>
+	<name>JEE Tutorials BOM</name>
+	<description>Bill of materials for entrofi jee tutorials</description>
+	<properties>
+		<versionProject>0.0.1-SNAPSHOT</versionProject>
+		<versionJSF>2.2.4</versionJSF>
+		<versionMojarraJSF>2.0.0-b04</versionMojarraJSF>
+		<versionJSTL>1.2</versionJSTL>
+		<versionServletAPI>3.0-alpha-1</versionServletAPI>
+		<versionJavaxServlet>3.1.0</versionJavaxServlet>
+		<versionJavaxJSPAPI>2.3.1</versionJavaxJSPAPI>
+		<versionMYSQL>5.1.6</versionMYSQL>
+		<versionEclipselink>2.4.2</versionEclipselink>
+		<versionRichfaces>4.3.5.Final</versionRichfaces>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>jsf-api</artifactId>
+				<version>${versionJSF}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>mojarra-jsf-impl</artifactId>
+				<version>${versionMojarraJSF}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>mojarra-jsf-api</artifactId>
+				<version>${versionMojarraJSF}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.faces</groupId>
+				<artifactId>jsf-impl</artifactId>
+				<version>${versionJSF}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${versionJSTL}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${versionJavaxServlet}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${versionServletAPI}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>javax.servlet.jsp-api</artifactId>
+				<version>${versionJavaxJSPAPI}</version>
+				<scope>provided</scope>
+			</dependency>
+
+
+			<!-- Persistence -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${versionMYSQL}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.persistence</groupId>
+				<artifactId>eclipselink</artifactId>
+				<version>${versionEclipselink}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.eclipse.persistence</groupId>
+				<artifactId>javax.persistence</artifactId>
+				<version>2.1.0</version>
+				<scope>provided</scope>
+			</dependency>
+
+
+
+			<!-- Richfaces -->
+			<dependency>
+				<groupId>org.richfaces.core</groupId>
+				<artifactId>richfaces-core-api</artifactId>
+				<version>${versionRichfaces}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.richfaces.core</groupId>
+				<artifactId>richfaces-core-impl</artifactId>
+				<version>${versionRichfaces}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.richfaces.ui</groupId>
+				<artifactId>richfaces-components-api</artifactId>
+				<version>${versionRichfaces}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.richfaces.ui</groupId>
+				<artifactId>richfaces-components-ui</artifactId>
+				<version>${versionRichfaces}</version>
+				<scope>runtime</scope>
+			</dependency>
+
+
+		</dependencies>
+	</dependencyManagement>
+</project>
