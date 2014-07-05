@@ -5,15 +5,25 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title><ui:insert name="title">
+	<title><ui:insert name="title">
 		E-Collector
 	</ui:insert></title>
-<ui:insert name="head" />
-<link rel="stylesheet" href="../css/layout.xhtml" type="text/css" />
+	<ui:insert name="head" />
+	<link rel="stylesheet" href="../css/global.css" type="text/css" />
 </h:head>
 <h:body id="body">
-	<ui:insert name="body"/>
+	<div id="bodyWrapper" class="wrapper">
+		<div id="headerWrapper" class="sectionWrapper">
+			<ui:insert name="header" />
+		</div>
+		<div id="contentWrapper" class="sectionWrapper">
+			<ui:insert name="body" />
+		</div>
+		<div id="footerWrapper" class="sectionWrapper">
+			<ui:insert name="footer" />
+		</div>
+	</div>
 </h:body>
 </html>

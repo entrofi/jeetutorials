@@ -1,37 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:a4j="http://richfaces.org/a4j"
-	xmlns:r="http://richfaces.org/rich">
-<h:head>
-	<h:outputText value="Hello JSF"></h:outputText>
-</h:head>
-<h:body>
-	<h:form id="createBookForm">
+	xmlns:r="http://richfaces.org/rich" template="/templates/layout.xhtml">
 
-		<r:panel>
-			<f:facet name="header">
+	<ui:define name="head">
+		<ui:define name="title">JSF Tutorials - Introduction</ui:define>
+
+	</ui:define>
+	<ui:define name="header">
+		<h1>#{info.welcomeToJSFTutorials}</h1>
+	</ui:define>
+	<ui:define name="body">
+
+		<h:form id="introForm">
+
+			<r:panel>
+				<f:facet name="header">
         Welcome to JSF tutorial series...
         </f:facet>
-			<table>
-				<tr>
-					<th>#{labels.Action}</th>
-					<th>#{labels.Description}</th>
-				</tr>
-				<tr>
-					<td><h:commandButton value="#{labels.ShowBeanScopes}" action="#{indexManagedBean.showBeanScopes}"/></td>
-					<td><h:outputText value="#{info.scopesPageDescription}"/></td>
-				</tr>
-			</table>
+				<table>
+					<tr>
+						<th>#{labels.Action}</th>
+						<th>#{labels.Description}</th>
+					</tr>
+					<tr>
+						<td><h:commandButton value="#{labels.ShowBeanScopes}"
+								action="#{indexManagedBean.showBeanScopes}" /></td>
+						<td><h:outputText value="#{info.scopesPageDescription}" /></td>
+					</tr>
+				</table>
 
-		</r:panel>
-		
+			</r:panel>
 
-	</h:form>
-</h:body>
 
-</html>
+		</h:form>
+	</ui:define>
+	<ui:define name="footer"></ui:define>
+</ui:composition>

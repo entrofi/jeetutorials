@@ -1,0 +1,56 @@
+
+/**
+
+<div id="bodyWrapper" class="wrapper">
+		<div id="headerWrapper" class="sectionWrapper">
+			<ui:insert name="header" />
+		</div>
+		<div id="contentWrapper" class="sectionWrapper">
+			<ui:insert name="body" />
+		</div>
+		<div id="footerWrapper" class="sectionWrapper">
+			<ui:insert name="footer" />
+		</div>
+	</div>
+	*/
+
+div#bodyWrapper{
+	margin:auto;
+	width: 90%;
+	min-width: 700px;
+	padding: 0;
+	background: #b5d0ed;
+}
+div#bodyWrapper div.sectionWrapper{
+	float: left;
+	clear: both;
+	width: 100%;
+	padding:10px;
+}
+div#headerWrapper{
+	height: 100px;
+	max-height: 100px;
+	min-height: 100px;
+	background: url("../assets/images/jsf-logo.png") no-repeat 0 0;
+	padding-left: 320px!important;
+	
+}
+
+div#contentWrapper{
+	
+}
+
+div#footerWrapper{
+	height: 100px;
+	min-height: 100px;
+}
+
+
+/*Header*/
+div#headerWrapper h1,
+div#headerWrapper h2,
+div#headerWrapper h31,
+div#headerWrapper {
+	font-size: 2em;
+	color: #68899d;
+}

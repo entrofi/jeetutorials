@@ -17,7 +17,7 @@
 		<versionJavaxJSPAPI>2.3.1</versionJavaxJSPAPI>
 		<versionMYSQL>5.1.6</versionMYSQL>
 		<versionEclipselink>2.4.2</versionEclipselink>
-		<versionRichfaces>4.3.5.Final</versionRichfaces>
+		<versionRichfaces>4.3.6.Final</versionRichfaces>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
