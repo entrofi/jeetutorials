@@ -15,18 +15,21 @@
 
 		<r:panel>
 			<f:facet name="header">
-        Write your own custom rich components with built-in AJAX support
+        Welcome to JSF tutorial series...
         </f:facet>
-        The CDK includes a code-generation facility and a
-        templating facility using a JSP-like syntax. These capabilities help
-        to avoid a routine process of a component creation. The component factory
-        works like a well-oiled machine allowing the creation of first-class
-        rich components with built-in Ajax functionality even more easily than
-        the creation of simpler components by means of the traditional coding
-        approach.   
-    </r:panel>
-		<h:commandButton value="#{labels.CreateBook}"
-			action="#{bookManagedBean.createNewBook}"></h:commandButton>
+			<table>
+				<tr>
+					<th>#{labels.Action}</th>
+					<th>#{labels.Description}</th>
+				</tr>
+				<tr>
+					<td><h:commandButton value="#{labels.ShowBeanScopes}" action="#{indexManagedBean.showBeanScopes}"/></td>
+					<td><h:outputText value="#{info.scopesPageDescription}"/></td>
+				</tr>
+			</table>
+
+		</r:panel>
+		
 
 	</h:form>
 </h:body>

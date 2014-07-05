@@ -1,0 +1,55 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:r="http://richfaces.org/rich" template="/templates/layout.xhtml">
+
+	<ui:define name="head">
+
+	</ui:define>
+
+
+	<ui:define name="body">
+		<h:form id="createBookForm">
+			<r:panel>
+				<f:facet name="header">
+					<h:outputText value="#{labels.CreateBook}"></h:outputText>
+				</f:facet>
+				<table>
+					<thead>
+						<tr></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<h:outputText value="#{labels.Title}"/>
+							</td>
+							<td><h:inputText value="#{bookManagedBean.book.title}"/></td>
+						</tr>
+						<tr>
+							<td>
+								<h:outputText value="#{labels.Author}"/>
+							</td>
+							<td><h:inputText value="#{bookManagedBean.book.author}"/></td>
+						</tr>
+						<tr>
+							<td>
+								<h:outputText value="#{labels.ISBN}"/>
+							</td>
+							<td><h:inputText value="#{bookManagedBean.book.isbn}"/></td>
+						</tr>
+						<tr>
+							<td>
+								<h:outputText value="#{labels.Description}"/>
+							</td>
+							<td><h:inputTextarea value="#{bookManagedBean.book.isbn}"></h:inputTextarea> </td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</r:panel>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

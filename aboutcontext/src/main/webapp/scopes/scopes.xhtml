@@ -1,0 +1,108 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:r="http://richfaces.org/rich" template="/templates/layout.xhtml">
+
+	<ui:define name="head">
+
+	</ui:define>
+
+
+	<ui:define name="body">
+		<h:form id="showScopesForm">
+			<r:panel>
+				<f:facet name="header">
+					<h:outputText value="#{labels.Scopes}"></h:outputText>
+				</f:facet>
+				<table>
+					<tr>
+						<th>#{labels.BeanName}</th>
+						<th>#{labels.Scope}</th>
+						<th>#{labels.Properties}</th>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{labels.applicationScopedManagedBean}" /></td>
+						<td><h:outputText value="#{labels.applicationScoped}" /></td>
+						<td>
+							<table>
+								<tr>
+									<td><h:outputText value="#{labels.firstNum}" /></td>
+									<td><h:outputText value="#{labels.secondNum}" /></td>
+									<td><h:outputText value="#{labels.sum}" disabled="true" /></td>
+
+								</tr>
+								<tr>
+									<td><h:inputText value="#{applicationScopedManagedBean.firstNum}" /></td>
+									<td><h:inputText value="#{applicationScopedManagedBean.secondNum}" /></td>
+									<td><h:inputText value="#{applicationScopedManagedBean.sum}" disabled="true" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{labels.noneScopedManagedBean}" /></td>
+						<td><h:outputText value="#{labels.noneScoped}" /></td>
+						<td>
+							<table>
+								<tr>
+									<td><h:outputText value="#{labels.firstNum}" /></td>
+									<td><h:outputText value="#{labels.secondNum}" /></td>
+									<td><h:outputText value="#{labels.sum}" disabled="true" /></td>
+
+								</tr>
+								<tr>
+									<td><h:inputText value="#{noneScopedManagedBean.firstNum}" /></td>
+									<td><h:inputText value="#{noneScopedManagedBean.secondNum}" /></td>
+									<td><h:inputText value="#{noneScopedManagedBean.sum}" disabled="true" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{labels.sessionScopedManagedBean}" /></td>
+						<td><h:outputText value="#{labels.sessionScoped}" /></td>
+						<td>
+							<table>
+								<tr>
+									<td><h:outputText value="#{labels.firstNum}" /></td>
+									<td><h:outputText value="#{labels.secondNum}" /></td>
+									<td><h:outputText value="#{labels.sum}" disabled="true" /></td>
+
+								</tr>
+								<tr>
+									<td><h:inputText value="#{sessionScopedManagedBean.firstNum}" /></td>
+									<td><h:inputText value="#{sessionScopedManagedBean.secondNum}" /></td>
+									<td><h:inputText value="#{sessionScopedManagedBean.sum}" disabled="true" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td><h:outputText value="#{labels.viewScopedManagedBean}" /></td>
+						<td><h:outputText value="#{labels.viewScoped}" /></td>
+						<td>
+							<table>
+								<tr>
+									<td><h:outputText value="#{labels.firstNum}" /></td>
+									<td><h:outputText value="#{labels.secondNum}" /></td>
+									<td><h:outputText value="#{labels.sum}" disabled="true" /></td>
+
+								</tr>
+								<tr>
+									<td><h:inputText value="#{viewScopedManagedBean.firstNum}" /></td>
+									<td><h:inputText value="#{viewScopedManagedBean.secondNum}" /></td>
+									<td><h:inputText value="#{viewScopedManagedBean.sum}" disabled="true" /></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr><td><h:commandButton value="#{labels.submit}" action="scopes/scopes"/></td></tr>
+				</table>
+
+			</r:panel>
+		</h:form>
+	</ui:define>
+
+</ui:composition>

@@ -38,9 +38,13 @@ public class Book {
 
 	private String title;
 
-	private String Author;
+	private String author;
 
-	private String Description;
+	private String description;
+	
+	private String isbn;
+
+	
 
 	/**
 	 * The getter method of the field id
@@ -86,7 +90,7 @@ public class Book {
 	 * @return the author
 	 */
 	public String getAuthor() {
-		return Author;
+		return author;
 	}
 
 	/**
@@ -95,7 +99,7 @@ public class Book {
 	 * @param author the author to set
 	 */
 	public void setAuthor(String author) {
-		Author = author;
+		this.author = author;
 	}
 
 	/**
@@ -104,7 +108,7 @@ public class Book {
 	 * @return the description
 	 */
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 
 	/**
@@ -113,7 +117,15 @@ public class Book {
 	 * @param description the description to set
 	 */
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 
+	
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
 }

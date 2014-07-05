@@ -15,6 +15,10 @@
 			<base-name>net.entrofi.tutorials.jee.ecollector.labels.labels</base-name>
 			<var>labels</var>
 		</resource-bundle>
+		<resource-bundle>
+			<base-name>net.entrofi.tutorials.jee.ecollector.staticinfo.info</base-name>
+			<var>info</var>
+		</resource-bundle>
 	</application>
 
 </faces-config>
